@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAGNUS - Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background2 (2).jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            min-height: 100vh;
+        }
+        .writeup-section, .info-section {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 500px;
+            margin: 24px auto;
+            background: #191919cc;
+            color: #fc7a00;
+            padding: 16px;
+            border-radius: 8px;
+        }
+        .info-section {
+            background: #070707cc;
+        }
+        input, textarea, button {
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #fc7a00;
+            font-size: 1em;
+            background: #191919;
+            color: #fc7a00;
+            box-sizing: border-box;
+        }
+        button {
+            background: #ff8902;
+            color: #f8eded;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #ff8800;
+        }
+        a {
+            color: #fc7a00;
+            text-decoration: underline;
+        }
+        .image-preview {
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .image-preview img {
+            max-width: 100%;
+            max-height: 180px;
+            border-radius: 6px;
+        }
+        /* Modal Styles */
+        #checkoutModal, #paymentModal, #loadingModal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            overflow: auto;
+        }
+        #checkoutModal .modal-content,
+        #paymentModal .modal-content,
+        #loadingModal .modal-content {
+            background: #020202;
+            color: #ff7b00;
+            max-width: 95vw;
+            width: 350px;
+            margin: 60px auto;
+            padding: 24px;
+            border-radius: 8px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        #paymentModal .modal-content {
+            background: #000;
+        }
+        #loadingModal .modal-content {
+            background: #fff;
+            color: #191919;
+            max-width: 200px;
+            text-align: center;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .writeup-section, .info-section {
+                max-width: 98vw;
+                margin: 12px auto;
+                padding: 8px;
+            }
+            #checkoutModal .modal-content,
+            #paymentModal .modal-content {
+                width: 98vw;
+                padding: 10px;
+            }
+            #loadingModal .modal-content {
+                width: 90vw;
+                padding: 10px;
+            }
+            h1, h2, h3 {
+                font-size: 1.1em;
+            }
+        }
+        /* Checkout buttons in a row */
+        .qty-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 8px;
+            align-items: center;
+        }
+        .qty-row button {
+            width: 36px;
+            height: 36px;
+            font-size: 1.2em;
+            padding: 0;
+        }
+        .qty-row span {
+            min-width: 24px;
+            text-align: center;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="writeup-section">
+        <h1>Welcome to MAGNUS Official Slot Booking Page</h1>
+        <p>Join Magnus to EARN, LEARN, and discover new CAREER opportunities!</p>
+        <div class="info-section">
+            <strong>About Magnus:</strong><br>
+            <h3>Magnus is a digital marketplace designed to help you gain hot in demand skills and access powerful digital products like trading tools,signals,analytics,and courses. it gives you the freedom to either use these products for personal growth or resell them for profit. with flexible entry plans, instant earning opportunities, ans even global job offers, MAGNUS is your shortcut to learning,earning and building digital wealth.</h3>
+         <strong>What Magnus Offers You:</strong><br>
+         <h3>🔑 Affordable entry plans</h3>
+<h3>🔑 Hot, in-demand digital products</h3>
+<h3>🔑 Multiple ways to earn</h3>
+<h3>🔑 Freedom to learn, use, or resell</h3>
+<h3>🔑 We handle the hard part, you enjoy the profits</h3>
+<a href="opportunties.jpg" target="_blank">
+                    <img src="opportunties.jpg"alt="opportunities" style="max-width:100px; border-radius:4px;"/>
+                </a>
+<strong>💵 𝗘𝗮𝗿𝗻𝗶𝗻𝗴𝘀 𝗣𝗼𝘁𝗲𝗻𝘁𝗶𝗮𝗹:</strong>
+<h3>Profit ₦5,000+ per sale
+Company handles advertising & logistics ✅
+Free resale setup manual (1–72hrs sales cycle)
+Multiple income streams: Skills + Resale + Commissions +  global Jobs opportunities</h3>
+<strong>👨‍💼 𝗝𝗼𝗯 & 𝗦𝗸𝗶𝗹𝗹 𝗔𝗱𝘃𝗮𝗻𝘁𝗮𝗴𝗲</strong>
+<h3>Acquire high-demand skills instantly
+Get employment (Magnus Business) with ₦5,000/hour global pay
+6 hours/day = ₦30,000/day = ₦900,000/month</h3>
+<a href="900k.jpg" target="_blank">
+                    <img src="900k.jpg"alt="earning" style="max-width:100px; border-radius:4px;" />
+                </a>
+        </div>
+        <div class="writeup-section">
+            <h2>MAGNUS has three entry plans:</h2>
+            <h3>MAGNUS Business Plan - #28,500</h3>
+            <h3>MAGNUS Pro Plan - #17,500</h3>
+            <h3>MAGNUS Lite Plan - #11,000</h3>
+            <h2>
+                <a href="entry plans.jpg" target="_blank">
+                    <img src="entry plans.jpg"alt="entry plan" style="max-width:100px; border-radius:4px;" />
+                </a>
+            </h2>
+            <h3>Choose a plan that suits you and start your journey with MAGNUS today!</h3>
+        </div>
+        <div class="writeup-section">
+            <h2>MAGNUS Is Verified By The Government<h2>
+            <h2>
+                <a href="varified.jpgp" target="_blank">
+                    <img src="varified.jpg"alt="Verified" style="max-width:100px; border-radius:4px;" />
+                </a>
+            </h2>
+            <form id="signupForm">
+            <input type="text" id="fullname" placeholder="Full Name" required />
+            <input type="text" id="username" placeholder="Username" required />
+            <input type="text" id="phone number" placeholder="Phone Number" required/>
+            <input type="password" id="password" placeholder="Password" required />
+            <textarea id="info" placeholder="input your whatsapp number as the descpription"></textarea>
+            <button type="submit">Signup</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <div id="checkoutModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:1000;">
+        <div style="background:#020202; color:#ff7b00; max-width:350px; margin:60px auto; padding:24px; border-radius:8px; position:relative;">
+            <h2>Checkout</h2>
+            <form id="checkoutForm">
+                <div style="margin-bottom:16px;">
+                    <b>MAGNUS Business Plan</b> - ₦28,500
+                    <div class="qty-row">
+                        <button type="button" onclick="changeQty('business', -1)">-</button>
+                        <span id="qty-business">0</span>
+                        <button type="button" onclick="changeQty('business', 1)">+</button>
+                    </div>
+                </div>
+                <div style="margin-bottom:16px;">
+                    <b>MAGNUS Pro Plan</b> - ₦17,500
+                    <div class="qty-row">
+                        <button type="button" onclick="changeQty('pro', -1)">-</button>
+                        <span id="qty-pro">0</span>
+                        <button type="button" onclick="changeQty('pro', 1)">+</button>
+                    </div>
+                </div>
+                <div style="margin-bottom:16px;">
+                    <b>MAGNUS Lite Plan</b> - ₦11,000
+                    <div class="qty-row">
+                        <button type="button" onclick="changeQty('lite', -1)">-</button>
+                        <span id="qty-lite">0</span>
+                        <button type="button" onclick="changeQty('lite', 1)">+</button>
+                    </div>
+                </div>
+                <div style="margin-bottom:16px;">
+                    <b>Total: ₦<span id="checkout-total">0</span></b>
+                </div>
+                <button type="button" onclick="closeCheckout()">Close</button>
+                <button type="button" id="proceedCheckout">Checkout</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:1001;">
+        <div style="background:#000000; color:#ff7b00; max-width:350px; margin:60px auto; padding:24px; border-radius:8px; position:relative;">
+            <h2>Payment Details</h2>
+            <p><b>Bank Name:</b> Zenith Bank</p>
+            <p><b>Account Name:</b> NGOZI FLORENCE</p>
+            <p><b>Account Number:</b> 2375193864</p>
+            <p>After payment, upload your payment receipt below:</p>
+            <input type="file" id="receiptInput" accept="image/*" />
+            <div id="receiptPreview" style="margin:12px 0;"></div>
+            <button type="button" onclick="closePayment()">Cancel</button>
+            <button type="button" id="donePayment">Done</button>
+        </div>
+    </div>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:1002;">
+        <div style="background:#fff; color:#191919; max-width:200px; margin:120px auto; padding:24px; border-radius:8px; text-align:center;">
+            <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading..." style="width:64px; height:64px;" />
+            <p>Processing...</p>
+        </div>
+    </div>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script>
+        // Receipt preview logic
+        document.getElementById('receiptInput').addEventListener('change', function(e) {
+            const preview = document.getElementById('receiptPreview');
+            preview.innerHTML = '';
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    const img = document.createElement('img');
+                    img.src = evt.target.result;
+                    img.style.maxWidth = '100%';
+                    img.style.maxHeight = '120px';
+                    preview.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Checkout quantities and prices
+        const prices = { business: 28500, pro: 17500, lite: 11000 };
+        const quantities = { business: 0, pro: 0, lite: 0 };
+
+        function changeQty(plan, delta) {
+            quantities[plan] = Math.max(0, quantities[plan] + delta);
+            document.getElementById('qty-' + plan).textContent = quantities[plan];
+            updateTotal();
+        }
+
+        function updateTotal() {
+            const total = (quantities.business * prices.business) +
+                          (quantities.pro * prices.pro) +
+                          (quantities.lite * prices.lite);
+            document.getElementById('checkout-total').textContent = total;
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkoutModal').style.display = 'none';
+        }
+
+        function closePayment() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('checkoutModal').style.display = 'block';
+        });
+
+        document.getElementById('proceedCheckout').addEventListener('click', function() {
+            // Calculate total amount
+            const total = (quantities.business * prices.business) +
+                          (quantities.pro * prices.pro) +
+                          (quantities.lite * prices.lite);
+
+            if (total === 0) {
+                alert('Please select at least one plan.');
+                return;
+            }
+
+            // Get user email or phone (Paystack requires at least email)
+            const email = prompt("Input your email for payment receipt:");
+            if (!email) {
+                alert('Email is required for payment.');
+                return;
+            }
+
+            // Hide checkout modal
+            document.getElementById('checkoutModal').style.display = 'none';
+
+            // Paystack payment
+            PaystackPop.setup({
+                key: 'pk_live_2b30a0bfa2c898b0801def58435bc7d534f68737', // Replace with your Paystack public key
+                email: email,
+                amount: total * 100, // Paystack expects amount in kobo
+                currency: "NGN",
+                ref: ''+Math.floor((Math.random() * 1000000000) + 1),
+                callback: function(response){
+                    alert('Payment complete! Reference: ' + response.reference);
+                    // Optionally show loading or success modal here
+                },
+                onClose: function(){
+                    alert('Payment window closed.');
+                }
+            }).openIframe();
+        });
+
+        document.getElementById('donePayment').addEventListener('click', function() {
+            document.getElementById('paymentModal').style.display = 'none';
+            document.getElementById('loadingModal').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('loadingModal').style.display = 'none';
+                alert('Thank you! Your payment is being processed.');
+            }, 3000);
+        });
+
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Optionally handle purchase logic here
+        });
+    </script>
+</body>
+</html>
